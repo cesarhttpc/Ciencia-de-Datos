@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1694719341 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1694719344 0
+["pdflatex"] 1694753444 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1694753446 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1693352630 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk" 1693352510 17512 6cd01f20f980e28056100ce70ea12289 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1693352512 21972 ff5acafcaee7d66340f87baf9dd7405d ""
@@ -11,6 +11,7 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplr8r.tfm" 1136793854 2796 d37c29814a6717720ee1a7c9a0b2c3b8 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplr8t.tfm" 1136793854 3820 ee5b9d58608ae328e43c6e2bfd4ff851 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplri8r.tfm" 1136793854 2720 70000d5e623e601132eab3cded5b819b ""
+  "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplri8t.tfm" 1136793854 3684 929c666381f7272e81481908b735ccba ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt0900.tfm" 993062338 1348 c9911882a95d2c1b82f0cccb2c651de8 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1095.tfm" 993062342 1352 fa21dcb5ddc7d1dc47d14cd897fdeb0f ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -39,6 +40,7 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplb8t.vf" 1136793854 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplr7t.vf" 1136793854 1380 037725697594405988999f61172f52de ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplr8t.vf" 1136793854 2324 a163806de13ddf37313d2ee968aa0a98 ""
+  "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/palatino/pplri8t.vf" 1136793854 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7m.vf" 1136793854 1812 de7624743c8bafe2ce204bec2f72ce7e ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7t.vf" 1136793854 1532 0ba0b316cfeb3df86c9701756c9a4b71 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/vf/public/mathpazo/zplmr7v.vf" 1136793854 1436 3cc3caf644d79936444909aaff6786a8 ""
@@ -216,11 +218,12 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
+  "Images/ClasificadorLogistico.png" 1694752117 42645 07d1b50a6bcd057b22b453faf1c88822 ""
   "Images/EscudoCimat.png" 1693525065 23978 afd125464800623154e6cd8f9742e14b ""
-  "Tarea2.tex" 1694719341 9050 b8e970aa4e91fbec98e4e765745cf271 ""
-  "build/Tarea2.aux" 1694719343 793 2c9e76a34c0ac1e9213db1f0ca880ab5 "pdflatex"
-  "build/Tarea2.out" 1694719343 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" 1694719341 9050 b8e970aa4e91fbec98e4e765745cf271 ""
+  "Tarea2.tex" 1694753444 11897 7a8fb09e5e08532194622b93d7fde257 ""
+  "build/Tarea2.aux" 1694753446 1039 2ad55931da5bfe9ca1015890bb98e319 "pdflatex"
+  "build/Tarea2.out" 1694753446 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" 1694753444 11897 7a8fb09e5e08532194622b93d7fde257 ""
   (generated)
   "build/Tarea2.aux"
   "build/Tarea2.log"

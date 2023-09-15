@@ -237,10 +237,46 @@ usando la estimación por regresión logística
   -(\hat{a}_{j,0} + \hat{a}_j^T x ) & > \hat{a}_{i,0} + \hat{a}_i^T x ,\\
   \hat{a }_{i,0} - \hat{a}_{j,0} + (\hat{a}_{i}-\hat{a }_j)^T x &> 0
 \end{align*}
-que forma un subconjunto de un hiperplano como deseaba mostrarse.
+que forma un subconjunto de un hiperplano, como deseaba mostrarse.
+\vspace{0.5cm}
+
+\textbf{Ejercicio práctico}
+
+Tenemos la base de datos que se conforma de una serie de 50 datos por tres clases diferentes de plantas para el largo y ancho de su sépalo y largo y ancho de su pétalo. En este ejercicio nos restringiremos a estudiar solamente el largo y ancho del sépalo ya que es más ilustrativo. 
+
+Ahora, déspues de cargar los datos, tenemos que importar las paqueterías mencionadas en el enunciado. Con \textit{LogisticRegression} nos permite ajustar un modelo logístico de tres clases a los datos. Con la paquetería \textit{DecisionBoundaryDisplay} nos permite graficar la regla de clasificación en sus diferentes regiones y fronteras. 
+
+Como es buena práctica para probar la eficiencia del modelo ajustado, tomamos una partición de la base de datos para entrenamiento y prebas. Con el comando
+\begin{lstlisting}
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
+\end{lstlisting}
+
+Luego, el ajuste con los datos de entrenamiento se construye con
+\begin{lstlisting}
+logisticRegr = LogisticRegression()
+clasificador = logisticRegr.fit(x_train, y_train)
+\end{lstlisting}
+
+Posteriormente, para usar la paquetería es necesario predecir el valor en cada punto de la región de interes. Por tanto, se constuye una malla que va de los extremos de los regresores, X, y se pide al modelo que prediga que valor toma en cada punto, es decir se aplica la regla de clasificación. 
+
+La gráfica de las regiones queda vista a continuación
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 15 cm ]{Images/ClasificadorLogistico.png}
+  \caption{Regiones de clasificación para regresión logística de la base de datos Iris para los sépalos de tres clases diferentes de plantas. }
+\end{figure}
+
+Notemos que las fronteras son efectivmente lineales, como se provo en un ejercicio previo. Además vemos que el ajuste con las clases en morado son excelentes, sin embargo ahí donde las clases se junta (amarillo y azul) tenemos clasificadores erroneos.
+
+Finalmente para probar la precisión del modelo, consideremos el comando
+\begin{lstlisting}
+score = logisticRegr.score(x_test, y_test)
+print("Proporción de veces que acierta el modelo: ", score)
+\end{lstlisting}
+que nos dice la proporción de datos bien clasificados contra el número total de datos. Vemos que al ejecutar el script para la partición de prueba del 20\% tenemos que hay 73.333 \% de datos bien clasificados, es decir 110 datos de los 150 clasifico el modelo de manera asertiva. Luego 40 de los 150 fueron erroenos.
 
 
-
-
+El \textbf{enlace al código} con los detalles del ejercicio práctico se encuentra \href{https://colab.research.google.com/drive/13hEX_ubDx0vYYG6S1ndCaer41euqlr3x?usp=sharing}{\color{blue} aquí}.
 
 \end{document}

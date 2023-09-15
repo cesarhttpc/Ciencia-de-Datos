@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  14 SEP 2023 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  14 SEP 2023 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -850,7 +850,13 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 145.
  [1
 
-{C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Images/EscudoCimat.png>] [2] [3] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Tercero\Ciencia de Datos\Ciencia de Datos\Tarea2\build\Tarea2.aux
+{C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Images/EscudoCimat.png>] [2]
+<Images/ClasificadorLogistico.png, id=44, 462.528pt x 346.896pt>
+File: Images/ClasificadorLogistico.png Graphic file (type png)
+<use Images/ClasificadorLogistico.png>
+Package pdftex.def Info: Images/ClasificadorLogistico.png  used on input line 266.
+(pdftex.def)             Requested size: 426.79134pt x 320.11154pt.
+ [3] [4 <./Images/ClasificadorLogistico.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Tercero\Ciencia de Datos\Ciencia de Datos\Tarea2\build\Tarea2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -862,17 +868,17 @@ Package rerunfilecheck Info: File `Tarea2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28597 strings out of 475503
- 549059 string characters out of 5761834
+ 28634 strings out of 475503
+ 549754 string characters out of 5761834
  1984248 words of memory out of 5000000
- 49317 multiletter control sequences out of 15000+600000
- 581494 words of font info for 95 fonts, out of 8000000 for 9000
+ 49342 multiletter control sequences out of 15000+600000
+ 582391 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,635b,1585s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "c:\Users\ce_ra\Documents\CIMAT\Semestres\Tercero\Ciencia de Datos\Ciencia de Datos\Tarea2\build\Tarea2.pdf" (3 pages, 148136 bytes).
+Output written on "c:\Users\ce_ra\Documents\CIMAT\Semestres\Tercero\Ciencia de Datos\Ciencia de Datos\Tarea2\build\Tarea2.pdf" (4 pages, 190564 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
