@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1694753444 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1694753446 0
+["pdflatex"] 1694753797 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1694753799 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1693352630 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk" 1693352510 17512 6cd01f20f980e28056100ce70ea12289 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1693352512 21972 ff5acafcaee7d66340f87baf9dd7405d ""
@@ -220,10 +220,10 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
   "Images/ClasificadorLogistico.png" 1694752117 42645 07d1b50a6bcd057b22b453faf1c88822 ""
   "Images/EscudoCimat.png" 1693525065 23978 afd125464800623154e6cd8f9742e14b ""
-  "Tarea2.tex" 1694753444 11897 7a8fb09e5e08532194622b93d7fde257 ""
-  "build/Tarea2.aux" 1694753446 1039 2ad55931da5bfe9ca1015890bb98e319 "pdflatex"
-  "build/Tarea2.out" 1694753446 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" 1694753444 11897 7a8fb09e5e08532194622b93d7fde257 ""
+  "Tarea2.tex" 1694753796 11897 481cf83b507c63b6f360b0a40b48db86 ""
+  "build/Tarea2.aux" 1694753798 1039 2ad55931da5bfe9ca1015890bb98e319 "pdflatex"
+  "build/Tarea2.out" 1694753798 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Tercero/Ciencia de Datos/Ciencia de Datos/Tarea2/Tarea2.tex" 1694753796 11897 481cf83b507c63b6f360b0a40b48db86 ""
   (generated)
   "build/Tarea2.aux"
   "build/Tarea2.log"
