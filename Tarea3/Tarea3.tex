@@ -1,0 +1,283 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment}
+\usepackage{lipsum} 
+\usepackage{fullpage} %cambiar margen
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+
+\usepackage{amssymb,amsthm} 
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+%\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{arrows,calc,positioning}
+\usepackage{mathpazo} %tipo de letra 
+\usepackage[utf8x]{inputenc} %codificación
+\usepackage[T1]{fontenc} %digitación de tildes y ñ
+\usepackage[spanish]{babel} %paquete de soporte español
+
+\tikzset{
+	block/.style = {draw, rectangle,
+		minimum height=1cm,
+		minimum width=1.5cm},
+	input/.style = {coordinate,node distance=1cm},
+	output/.style = {coordinate,node distance=4cm},
+	arrow/.style={draw, -latex,node distance=2cm},
+	pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+	sum/.style = {draw, circle, node distance=1cm},
+}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\usepackage{listings}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+
+\lstset{escapechar=@,style=customc}
+
+
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Ejercicio]
+{ \begin{mdframed}[backgroundcolor= red!50] \textbf{#1 #2} \\}
+	{  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+{\textcolor{blue}{\textbf{\textit{Solución:\\\noindent}}}}
+
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+% \\	
+\begin{document}
+	\noindent
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{minipage}[b][1.2cm][t]{0.8\textwidth}
+		\large\textbf{César Isaí García Cornejo} \hfill \textbf{Tarea 3}  \\
+		cesar.cornejo@cimat.mx \hfill \\
+		\normalsize Ciencia de Datos \hfill Semestre 3\\
+	\end{minipage}
+	
+	\hspace{14.4cm}
+	\begin{minipage}[b][0.03cm][t]{0.12\linewidth}
+		
+		\vspace{-2.2cm}
+		%%%La Ruta depeendera de donde este alojado el main y la imagen
+		\includegraphics[scale=0.3]{Images/EscudoCimat.png}
+	\end{minipage}
+	
+	\noindent\rule{7in}{2.8pt}
+	
+	%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\setlength{\parskip}{\medskipamount}
+	\setlength{\parindent}{0pt}
+ 
+\begin{problem}{1}
+Sea $ab^T$ tal que $a$, $b$ son vectores $n$-dimensionales.
+\begin{enumerate}
+\item Dar una descomposición SVD de esa matriz en la forma $A = UDV^T$ y en la forma $A = \sum \lambda_i u_iv^T_i$. Se expresará los $\lambda_i$ en función de $a$ y $b$.
+\item En estas dos mismas formas dar la descomposición de la matriz $A^2 - A$.
+\item Mostrar que cuando $< \text{a},\text{b}> = 1 $, $A$ es una matriz de proyección sobre un espacio que se describirá.
+\end{enumerate}
+
+\end{problem}
+
+\begin{solution}
+Las columnas de la matriz U son los vectores propios de $AA^{T}$, y las columnas de la matriz V son los vectores propios de $A^{T}A$. Así, para calcular las columnas de U, 
+\begin{align*}
+    A A^{T} = (ab^{T})(ab^{T})^{T} = (ab^{T})(b a^{T}) = (b^{T} b)aa^{T}, 
+\end{align*}
+sustituyendo $\beta = b^{T}b$ y haciendo un cambio de variable, se obtiene $c = \sqrt{\beta} a$. Por lo tanto, se tiene que calcular los eigenvectores de la matriz $S = c c^{T}$. El rango de la matriz S es uno porque todas las columnas son múltiplos de una columna $c$, por lo tanto, el determinante es cero. Así, un eigenvalor de $S$ es cero; y otro eigenvalor es $||c||^{2}$, ya que:
+\begin{align*}
+    (c c^{T})c = c(c^{T}c) = c \left \| c \right \|^{2} = \left \| c \right \|^{2}c = \lambda c. 
+\end{align*}
+Cualquier vector $u$ que sea ortogonal a $c$ es un eigenvector con eigenvalor 0, y para el otro eigenvalor, $c$ es un eigenvector (ya no hay otros eigenvalores por la multiplicidad).  Para el caso de V se tiene, 
+\begin{align*}
+    A^{T} A = (ab^{T})^{T}(ab^{T}) = (b a^{T})(ab^{T}) = (a^{T}a) b b^{T}, 
+\end{align*}
+y aplicando el mismo argumento, se encuentran los dos mismos eigenvalores. Los eigenvalores de $A$ para construir la matriz $D$ son $0$ y $b^{T}a$. Por lo tanto, 
+\begin{align*}
+A = \begin{pmatrix}
+\vdots & \vdots  \\ 
+x & \sqrt{b^{T}b}a  \\
+\vdots & \vdots  
+\end{pmatrix}
+\begin{pmatrix}
+0 & 0\\ 
+0 & b^{T}a
+\end{pmatrix}
+\begin{pmatrix}
+\dots & y & \dots\\ 
+\dots & \sqrt{a^{T}a}b & \dots
+\end{pmatrix}, 
+\end{align*}
+donde $x$ y $y$ son vectores ortogonales a $\sqrt{b^T b}a$ y $\sqrt{a^T a}b$ respectivamente. Otra forma de expresar $A$ sería, 
+\begin{align*}
+    A = (b^{T}a)(y_{n} +  \sqrt{a^{T}a}b_{n})(x_{n} + \sqrt{b^{T}b}a_{n}).
+\end{align*}
+
+2. Sustituyendo B = $A^{2}-A = (b^{T}a - 1)A$. Para obtener las columnas de U y V, 
+\begin{align*}
+    B^{T}B = (b^{T}a-1)^{2}(b^{T}b)aa^{T}, \\
+    B B^{T} = (b^{T}a-1)^{2}(a^{T}a)bb^T. 
+\end{align*}
+Aplicando el mismo procedimiento de arriba se obtiene, 
+\begin{align*}
+    B &= \begin{pmatrix}
+\vdots & \vdots  \\ 
+x & (b^{T}a-1)\sqrt{a^{T}a}b  \\
+\vdots & \vdots  
+\end{pmatrix}
+\begin{pmatrix}
+0 & 0\\ 
+0 & (b^{T}a-1)(b^{T}a)
+\end{pmatrix}
+\begin{pmatrix}
+\dots & y & \dots\\ 
+\dots & (b^{T}a-1)\sqrt{b^{T}b}a  & \dots
+\end{pmatrix}, \\
+&= (b^{T}a-1)(b^{T}a)(x_{n} + (b^{T}a-1)\sqrt{a^{T}a}b_{n})(y_{n} + (b^{T}a-1)\sqrt{b^{T}b}a_{n}).  
+\end{align*}
+3. Una matriz se considera una matriz de proyección si los eigenvalores de esta son cero  o uno. Se encontró que uno de los eigenvalores era cero, y el otro era igual a $b^{T}a = a^{T}b = <a, b> = 1$, por lo tanto, es una matriz de proyección. 
+
+\end{solution}
+
+	
+\begin{problem}{2}
+    Sea $A$ una matriz $n\times m$ de rango $r$. Consideramos su descomposición SVD, $A = UDV^T$ con 
+    \begin{align*}
+        D = \begin{pmatrix}
+        \Lambda &0 \\
+        0 &0 
+        \end{pmatrix}
+    \end{align*}
+    y $\Lambda$ una matriz diagonal de valores propios positivos. Definamos $A^{-} = V D^{-1}U^T$ donde 
+    \begin{align*}
+        D^{-1} = \begin{pmatrix}
+        \Lambda^{-} &0 \\
+        0 &0 
+        \end{pmatrix}
+    \end{align*}
+    \begin{enumerate}
+        \item Mostrar que $A^-$ es tal que $A A^{-}A = A $ y $A^{-} A A^{-} = A^{-}$ y que las matrices $AA^{-}$ y $A^{-}A$ son simétricas.
+        \item Para un $b \in \mathbb{R}^m$, consideramos el problema de regresión lineal siguiente 
+        \begin{align*}
+            \underset{x \in \mathbb{R}^n}{\text{argmin}}\left \| Ax - b \right \|^2
+        \end{align*}
+        donde $\left \| \cdot \right \|$ es la norma euclidanea. Supongamos que no existe un $x\in \mathbb{R}^n$ tal que $Ax = b$. Mostrar que el problema se resuelve con la solución $x^{*} = A^{-}b$. (Pista : Usar la descomposición $x = x^{*} + h$ y descomponer $\left \| Ax - b \right \|^2$). 
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+Para la primer relación
+\begin{align*}
+    A A^{-}A &= (U D V^{T}) (V D^{-1} U^{T}) (U D V^{T}), \\
+    &= U D ( V^{T} V ) D^{-1} (U ^{T} U) D V ^{T}, \\
+    &= U (D D^{-1}) D V ^{T}, \\
+    &= U D V ^{T}, \\
+    &= A.
+\end{align*}
+Para la segunda relación
+\begin{align*}
+    A^{-}A A^{-} &= (V D^{-1} U^{T})  (U D V^{T}) (V D^{-1} U^{T}) , \\
+    &= V D^{-1}(U ^{T} U) D (V^{T} V) D^{-1} U^{T}, \\
+    &= V (D^{-1} D) D^{-1} U^{T}, \\
+    &= V D^{-1} U^{T}, \\
+    &= A^{-}.
+\end{align*}
+Una matriz es simétrica si es igual a su transpuesta, entonces:
+\begin{align*}
+    A A^{-} &= (UDV^{T})(VD^{-1}U^{T}) , \\
+    &= UDD^{-1}U^T,\\
+    &= U\begin{pmatrix}
+            \Lambda &0 \\0 
+             &0 
+        \end{pmatrix}
+        \begin{pmatrix}
+            \Lambda^{-1} &0 \\0 
+             &0 
+        \end{pmatrix} U^T, \\
+        & = U
+        \begin{pmatrix}
+            I &0 \\0 
+             &0 
+        \end{pmatrix}U^T,\\
+        &= U_1U_1^T,\\
+        &= I_k,
+\end{align*}
+y como $I_k = I_k^T$, el producto de estas matrices es una matriz simétrica.
+Lo mismo podemos argumentar para
+\begin{align*}
+    A^{-}A &= (VD^{-1}U^{T})(UDV^{T}) ,\\
+    &= VD^{-1}DV^T,\\
+    &= V\begin{pmatrix}
+            \Lambda^{-1} &0 \\0 
+             &0 
+        \end{pmatrix}
+        \begin{pmatrix}
+            \Lambda &0 \\0 
+             &0 
+        \end{pmatrix} V^T, \\
+        & = V
+        \begin{pmatrix}
+            I &0 \\0 
+             &0 
+        \end{pmatrix}V^T,\\
+        &= V_1V_1^T,\\
+        &= I_k,
+\end{align*}
+\\
+
+2. Simplificando el problema de regresión, se obtiene: $\left \|  Ax -b\right \|^{2} = x^{T}A^{T}Ax - 2b^{T}Ax + b^{T}b$ y calculando el gradiente para poder minimizar e igualando a cero $\nabla_{x} \left \|  Ax -b\right \|^{2} = 2A^{T}Ax - 2A^{T}b  = 0$, sustituyendo: 
+\begin{align*}
+    A^{T}A(x^{*} + h) &= A^{T}b, \\
+A^{T}Ax^{*} &= A^{T}b - A^{T}Ah, \\
+(VDU^{T})(UDV^{T})x^{*} &= (VDU^{T})(b-Ah), \\
+VD^{2}V^{T}x^{*} &= (VDU^{T})(b-Ah), \\
+V^{T}(VD^{2}V^{T}x^{*}) &= V^T(VDU^{T})(b-Ah), \\
+D^{2}V^{T}x^{*} &= DU^{T}(b-Ah), \\
+x^{*} &= VD^{-}U^{T}b-h, \\
+x^{*} + h &= A^{-}b, \\
+x &= A^{-}b. 
+\end{align*}
+
+\end{solution}
+
+
+
+\end{document}
